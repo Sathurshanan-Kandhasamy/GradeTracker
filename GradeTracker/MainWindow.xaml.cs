@@ -27,8 +27,10 @@ namespace GradeTracker
         List<Student> myStudents = new List<Student>();
         // List to store grades.
         List<ResultView> resultViews = new List<ResultView>();
+
         // Create the class to manage all our database interactions.
         Adapter db = new Adapter();
+
         // Acts as a flag to determine which version of the save method is used.
         bool isNewEntry = true;
         bool isGradeWindow = false;
@@ -40,13 +42,10 @@ namespace GradeTracker
             dgvGrades.Visibility = Visibility.Collapsed;
             GetStudentTable();
             LoadResultTable();
-            
-            
         }
 
         private void GetStudentTable()
         {
-
             // Get the list of objects mapped with rows of the SQL database table.
             myStudents = db.GetAllStudents();
 
@@ -65,8 +64,6 @@ namespace GradeTracker
             cboStudentList.SelectedIndex = 0;
             dgvStudents.Visibility = Visibility.Visible;
             isGradeWindow = false;
-
-
         }
 
         private void cboStudentList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -184,11 +181,13 @@ namespace GradeTracker
             }
            
         }
+
         private void LoadResultTable()
         {
             resultViews = db.GetAllForResultView();
             dgvGrades.ItemsSource = resultViews;
         }
+
         private void dgvGrades_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ResultView selected = (ResultView)dgvGrades.SelectedItem;
@@ -197,7 +196,6 @@ namespace GradeTracker
         private void dgvGrades_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             Student selected = (Student)dgvGrades.SelectedItem;
-            
         }
 
         private void btnNewWindow_Click(object sender, RoutedEventArgs e)
@@ -206,7 +204,6 @@ namespace GradeTracker
             GradeView GradeWindow = new GradeView();
             GradeWindow.Owner = this;
             GradeWindow.Show();
-            
         }
     }
   

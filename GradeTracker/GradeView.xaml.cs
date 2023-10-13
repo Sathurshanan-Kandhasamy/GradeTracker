@@ -20,7 +20,6 @@ namespace GradeTracker
     /// </summary>
     public partial class GradeView : Window
     {
-
         public string ViewModel { get; set; }
         // List to store grades.
         List<ResultView> resultViews = new List<ResultView>();
@@ -36,7 +35,5 @@ namespace GradeTracker
             resultViews = db.GetAllForResultView();
             dgvGrades.ItemsSource = resultViews;
         }
-
-      
     }
 }

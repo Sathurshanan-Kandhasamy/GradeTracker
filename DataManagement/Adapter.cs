@@ -100,6 +100,5 @@ namespace DataManagement
                 return connection.Query<ResultView>(sql).ToList();
             }
         }
-
     }
 }
