@@ -7,7 +7,6 @@ using Dapper;
 
 
 namespace DataManagement
-
 {
     public class Adapter
     {

@@ -21,15 +21,19 @@ namespace GradeTracker
     public partial class GradeView : Window
     {
         public string ViewModel { get; set; }
+
         // List to store grades.
         List<ResultView> resultViews = new List<ResultView>();
+
         // Create the class to manage all our database interactions.
         Adapter db = new Adapter();
+
         public GradeView()
         {
             InitializeComponent();
             LoadResultTable();
         }
+
         private void LoadResultTable()
         {
             resultViews = db.GetAllForResultView();

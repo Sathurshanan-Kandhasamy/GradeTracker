@@ -68,9 +68,7 @@ namespace GradeTracker
 
         private void cboStudentList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
             Student selected = (Student)cboStudentList.SelectedItem;
-
             if (selected != null) 
             {
                 txtId.Text = Convert.ToString(selected.StudentId);
@@ -117,7 +115,6 @@ namespace GradeTracker
 
         private void btnNew_Click(object sender, RoutedEventArgs e)
         {
-
             if (!isGradeWindow)
             {
                 dgvStudents.Visibility = Visibility.Visible;
@@ -129,7 +126,6 @@ namespace GradeTracker
                 // Sets the save mode to use the method for an new save.
                 isNewEntry = true;
             }
-
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
@@ -147,7 +143,6 @@ namespace GradeTracker
         private void dgvStudents_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Student selected = (Student)dgvStudents.SelectedItem;
-
             if (selected != null)
             {
                 txtId.Text = Convert.ToString(selected.StudentId);
@@ -160,6 +155,7 @@ namespace GradeTracker
                 cboStudentList.SelectedIndex = dgvStudents.SelectedIndex;
                 isGradeWindow = false;
             }
+
             cboStudentList.SelectedIndex = dgvStudents.SelectedIndex;
             // Sets the save mode to use the method for an update save type.
             isNewEntry = false;
@@ -199,7 +195,6 @@ namespace GradeTracker
 
         private void btnNewWindow_Click(object sender, RoutedEventArgs e)
         {
-            
             GradeView GradeWindow = new GradeView();
             GradeWindow.Owner = this;
             GradeWindow.Show();
