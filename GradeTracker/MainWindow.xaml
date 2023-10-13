@@ -16,7 +16,6 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Grid.RowSpan="2" Margin="10">
-           
             <Label>ID:</Label>
             <TextBox x:Name="txtId" IsReadOnly="True"/>
             <Label>First Name:</Label>
@@ -30,7 +29,6 @@
             <Button x:Name="btnDelete" Margin="20,10" Click="btnDelete_Click">Delete</Button>
             <Button x:Name="btnGrades" Margin="20,10" Click="btnGrades_Click">Grades</Button>
             <Button x:Name="btnNewWindow" Margin="20,10" Click="btnNewWindow_Click">NEW Win Grades</Button>
-
         </StackPanel>
         <DataGrid x:Name="dgvStudents" Grid.Column="1" IsReadOnly="True" Margin="10" SelectionChanged="dgvStudents_SelectionChanged" />
         <DataGrid x:Name="dgvGrades" Grid.Column="1" IsReadOnly="True" Margin="10" SelectionChanged="dgvGrades_SelectionChanged" MouseDoubleClick="dgvGrades_MouseDoubleClick" />

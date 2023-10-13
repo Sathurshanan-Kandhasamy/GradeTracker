@@ -179,7 +179,6 @@ namespace GradeTracker
                 dgvGrades.Visibility = Visibility.Visible;
                 isGradeWindow = true;
             }
-           
         }
 
         private void LoadResultTable()
@@ -206,5 +205,4 @@ namespace GradeTracker
             GradeWindow.Show();
         }
     }
-  
 }
