@@ -23,12 +23,12 @@ namespace GradeTracker
     /// </summary>
     public partial class MainWindow : Window
     {
-        // List to store all out student records.
+        // List to store all student records.
         List<Student> myStudents = new List<Student>();
         // List to store grades.
         List<ResultView> resultViews = new List<ResultView>();
 
-        // Create the class to manage all our database interactions.
+        // Create the class to manage all database interactions.
         Adapter db = new Adapter();
 
         // Acts as a flag to determine which version of the save method is used.
@@ -108,7 +108,7 @@ namespace GradeTracker
                     // Send the details to the database to be saved as a new entry.
                     db.AddNewStudent(student);
                 }
-                // ReRead SQL table and refresh the DataGrid.
+                // Reread SQL table and refresh the DataGrid.
                 GetStudentTable();
             }
         }
@@ -134,7 +134,7 @@ namespace GradeTracker
             {
                 int selItem = Convert.ToInt32(cboStudentList.SelectedValue);
                 db.DeleteStudent(selItem);
-                // ReRead SQL table and refresh the DataGrid.
+                // Reread SQL table and refresh the DataGrid.
                 GetStudentTable();
             }
         }

@@ -67,7 +67,7 @@ namespace DataManagement
             // String containing the query to be executed.
             string sql = "INSERT INTO Students(FirstName, LastName, Email) " +
                          "VALUES(@FirstName, @LastName, @Email)";
-            // Using statement that manages and disposes of our sql connection.
+            // Using statement that manages and disposes of sql connection.
             using (var connection = Helper.GetConnection())
             {
                 // The command being sent to the database to be executed.
@@ -83,7 +83,7 @@ namespace DataManagement
         {
             // String containing the query to be executed.
             string sql = $"DELETE FROM Students WHERE StudentId = {id}";
-            // Using statement that manages and disposes of our sql connection.
+            // Using statement that manages and disposes of sql connection.
             using (var connection = Helper.GetConnection())
             {
                 // The command being sent to the database to be executed.

@@ -25,7 +25,7 @@ namespace GradeTracker
         // List to store grades.
         List<ResultView> resultViews = new List<ResultView>();
 
-        // Create the class to manage all our database interactions.
+        // Create the class to manage all database interactions.
         Adapter db = new Adapter();
 
         public GradeView()
